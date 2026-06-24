@@ -1,0 +1,66 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx}'],
+  theme: {
+    extend: {
+      colors: {
+        gold: {
+          50:  '#FFFBEB',
+          100: '#FEF3C7',
+          200: '#FDE68A',
+          300: '#FCD34D',
+          400: '#FBBF24',
+          500: '#F59E0B',
+          600: '#D97706',
+          700: '#B45309',
+          800: '#92400E',
+          900: '#78350F',
+        },
+        obsidian: {
+          50:  '#F7F7F7',
+          100: '#E8E8E8',
+          200: '#D1D1D1',
+          300: '#B0B0B0',
+          400: '#888888',
+          500: '#6D6D6D',
+          600: '#5D5D5D',
+          700: '#4F4F4F',
+          800: '#454545',
+          900: '#3D3D3D',
+          950: '#1A1A1A',
+          975: '#111111',
+          1000:'#0A0A0A',
+        },
+      },
+      fontFamily: {
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        body: ['"Inter"', 'system-ui', 'sans-serif'],
+      },
+      keyframes: {
+        slideInUp: { from: { opacity: 0, transform: 'translateY(24px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+        slideInDown: { from: { opacity: 0, transform: 'translateY(-16px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+        fadeIn: { from: { opacity: 0 }, to: { opacity: 1 } },
+        scaleIn: { from: { opacity: 0, transform: 'scale(0.92)' }, to: { opacity: 1, transform: 'scale(1)' } },
+        shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+        pulse_gold: { '0%,100%': { boxShadow: '0 0 0 0 rgba(251,191,36,0.4)' }, '50%': { boxShadow: '0 0 0 8px rgba(251,191,36,0)' } },
+        float: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-6px)' } },
+        toastIn: { from: { opacity: 0, transform: 'translateX(100%)' }, to: { opacity: 1, transform: 'translateX(0)' } },
+      },
+      animation: {
+        slideInUp: 'slideInUp 0.4s cubic-bezier(0.16,1,0.3,1) both',
+        slideInDown: 'slideInDown 0.3s cubic-bezier(0.16,1,0.3,1) both',
+        fadeIn: 'fadeIn 0.3s ease both',
+        scaleIn: 'scaleIn 0.35s cubic-bezier(0.16,1,0.3,1) both',
+        shimmer: 'shimmer 2.5s linear infinite',
+        pulse_gold: 'pulse_gold 2s ease-in-out infinite',
+        float: 'float 3s ease-in-out infinite',
+        toastIn: 'toastIn 0.4s cubic-bezier(0.16,1,0.3,1) both',
+      },
+      backgroundImage: {
+        'gold-shimmer': 'linear-gradient(90deg, #B45309 0%, #FCD34D 40%, #F59E0B 60%, #B45309 100%)',
+        'card-shine': 'linear-gradient(135deg, rgba(251,191,36,0.08) 0%, transparent 50%, rgba(251,191,36,0.04) 100%)',
+      },
+    },
+  },
+  plugins: [],
+}
